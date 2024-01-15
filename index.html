@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebRTC Peer-to-Peer Example</title>
+    <style>
+      #localVideo,
+      #remoteVideo,
+      #remoteVideo {
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+      }
+      #remoteVideo1 {
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+        /* filter: blur(20px); */
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex;flex-direction: row;">
+      <div>
+        <form id="connectBtn">
+          You
+          <textarea id="You"></textarea>
+          Other
+          <textarea id="Other"></textarea>
+        </form>
+        <button id="closeConnection">Close Connection</button>
+
+        <button id="createOfferBtn" onclick="start()">Create Offer</button>
+        <button id="createAnswerBtn">Create Answer</button>
+        <button id="openDataChannel">Open DC</button>
+        <pre id="status">
+          local:
+          remote:</pre
+        >
+
+        <button id="refresh">Refresh</button>
+        <textarea id="messageInput" placeholder="Type a message"></textarea>
+        <button id="sendMessage">Send Message</button>
+        <video id="video" autoplay></video>
+      </div>
+      <pre style="margin-left: 10px;" id="chat"></pre>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
